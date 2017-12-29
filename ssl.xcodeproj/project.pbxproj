@@ -184,6 +184,8 @@
 			);
 			name = "Build openssl";
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/lib/libssl.a",
+				"$(BUILT_PRODUCTS_DIR)/lib/libcrypto.a",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
