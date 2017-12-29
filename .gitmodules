@@ -4,3 +4,4 @@
 [submodule "Submodules/ios-xcode-make-scripts"]
 	path = Submodules/ios-xcode-make-scripts
 	url = https://github.com/IMcD23/ios-xcode-make-scripts.git
+	branch = master
