@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>iphoneos-armv7s</key>
+	<string>ios-arm32-cross</string>
+	<key>iphoneos-armv7</key>
+	<string>ios-arm32-cross</string>
+	<key>iphoneos-arm64</key>
+	<string>ios-arm64-cross</string>
+	<key>iphonesimulator-i386</key>
+	<string>ios-sim32-cross</string>
+	<key>iphonesimulator-x86_64</key>
+	<string>ios-sim64-cross</string>
+</dict>
+</plist>
