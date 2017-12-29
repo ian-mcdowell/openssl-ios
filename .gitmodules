@@ -1,3 +1,6 @@
 [submodule "Submodules/openssl"]
 	path = Submodules/openssl
 	url = https://github.com/openssl/openssl.git
+[submodule "Submodules/ios-xcode-make-scripts"]
+	path = Submodules/ios-xcode-make-scripts
+	url = https://github.com/IMcD23/ios-xcode-make-scripts.git

@@ -187,7 +187,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/../ios-xcode-make-scripts/build-make-staticlib --config=$SRCROOT/Configurations/openssl-ios.conf no-shared no-gost no-asm no-tests";
+			shellScript = "$SRCROOT/Submodules/ios-xcode-make-scripts/build-make-staticlib --config=$SRCROOT/Configurations/openssl-ios.conf no-shared no-gost no-asm no-tests";
 		};
 /* End PBXShellScriptBuildPhase section */
 
