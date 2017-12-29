@@ -1,0 +1,18 @@
+<plist>
+<dict>
+    <key>name</key>
+    <string>openssl-ios</string>
+    <key>url</key>
+    <string>https://github.com/IMcD23/openssl-ios.git</string>
+    <key>library</key>
+    <dict>
+        <key>url</key>
+        <string>https://github.com/openssl/openssl.git</string>
+        <key>branch</key>
+        <string>master</string>
+    </dict>
+    <key>dependencies</key>
+    <array>
+    </array>
+</dict>
+</plist>
