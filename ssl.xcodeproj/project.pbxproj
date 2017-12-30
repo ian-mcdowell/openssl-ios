@@ -6,20 +6,6 @@
 	objectVersion = 48;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		3CB4758B1FF5C42900C6B265 /* openssl */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 3CB4758C1FF5C42900C6B265 /* Build configuration list for PBXAggregateTarget "openssl" */;
-			buildPhases = (
-				3CB4758F1FF5C44900C6B265 /* Build openssl */,
-			);
-			dependencies = (
-			);
-			name = openssl;
-			productName = openssl;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		3CB475851FF5C40300C6B265 /* ssl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB475831FF5C40300C6B265 /* ssl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB475941FF5C92900C6B265 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB475931FF5C92900C6B265 /* libcrypto.a */; };
@@ -28,11 +14,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3CB475901FF5C65900C6B265 /* PBXContainerItemProxy */ = {
+		3CB476631FF75B6400C6B265 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CB475771FF5C40300C6B265 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3CB4758B1FF5C42900C6B265;
+			remoteGlobalIDString = 3CB4765F1FF75AFD00C6B265;
 			remoteInfo = openssl;
 		};
 /* End PBXContainerItemProxy section */
@@ -41,9 +27,9 @@
 		3CB475801FF5C40300C6B265 /* ssl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ssl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB475831FF5C40300C6B265 /* ssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
 		3CB475841FF5C40300C6B265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CB475931FF5C92900C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = lib/libcrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB475951FF5C92C00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = lib/libssl.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB475981FF5C98500C6B265 /* openssl */ = {isa = PBXFileReference; lastKnownFileType = text; name = openssl; path = include/openssl; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB475931FF5C92900C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = .ibuild/build/lib/libcrypto.a; sourceTree = SOURCE_ROOT; };
+		3CB475951FF5C92C00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = .ibuild/build/lib/libssl.a; sourceTree = SOURCE_ROOT; };
+		3CB475981FF5C98500C6B265 /* openssl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = openssl; path = .ibuild/build/include/openssl; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +103,23 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXLegacyTarget section */
+		3CB4765F1FF75AFD00C6B265 /* openssl */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 3CB476601FF75AFD00C6B265 /* Build configuration list for PBXLegacyTarget "openssl" */;
+			buildPhases = (
+			);
+			buildToolPath = "$(SRCROOT)/Submodules/ibuild/ibuild";
+			buildWorkingDirectory = "$(SRCROOT)";
+			dependencies = (
+			);
+			name = openssl;
+			passBuildSettingsInEnvironment = 1;
+			productName = test;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		3CB4757F1FF5C40300C6B265 /* ssl */ = {
 			isa = PBXNativeTarget;
@@ -129,7 +132,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3CB475911FF5C65900C6B265 /* PBXTargetDependency */,
+				3CB476641FF75B6400C6B265 /* PBXTargetDependency */,
 			);
 			name = ssl;
 			productName = ssl;
@@ -149,9 +152,8 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					3CB4758B1FF5C42900C6B265 = {
+					3CB4765F1FF75AFD00C6B265 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -168,28 +170,10 @@
 			projectRoot = "";
 			targets = (
 				3CB4757F1FF5C40300C6B265 /* ssl */,
-				3CB4758B1FF5C42900C6B265 /* openssl */,
+				3CB4765F1FF75AFD00C6B265 /* openssl */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3CB4758F1FF5C44900C6B265 /* Build openssl */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Build openssl";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = $SRCROOT/Submodules/ibuild/ibuild;
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CB4757B1FF5C40300C6B265 /* Sources */ = {
@@ -202,10 +186,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3CB475911FF5C65900C6B265 /* PBXTargetDependency */ = {
+		3CB476641FF75B6400C6B265 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3CB4758B1FF5C42900C6B265 /* openssl */;
-			targetProxy = 3CB475901FF5C65900C6B265 /* PBXContainerItemProxy */;
+			target = 3CB4765F1FF75AFD00C6B265 /* openssl */;
+			targetProxy = 3CB476631FF75B6400C6B265 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -363,16 +347,25 @@
 			};
 			name = Release;
 		};
-		3CB4758D1FF5C42900C6B265 /* Debug */ = {
+		3CB476611FF75AFD00C6B265 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		3CB4758E1FF5C42900C6B265 /* Release */ = {
+		3CB476621FF75AFD00C6B265 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -398,11 +391,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CB4758C1FF5C42900C6B265 /* Build configuration list for PBXAggregateTarget "openssl" */ = {
+		3CB476601FF75AFD00C6B265 /* Build configuration list for PBXLegacyTarget "openssl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3CB4758D1FF5C42900C6B265 /* Debug */,
-				3CB4758E1FF5C42900C6B265 /* Release */,
+				3CB476611FF75AFD00C6B265 /* Debug */,
+				3CB476621FF75AFD00C6B265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
