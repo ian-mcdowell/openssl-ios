@@ -14,5 +14,7 @@
     <key>dependencies</key>
     <array>
     </array>
+    <key>buildSystem</key>
+    <string>make</string>
 </dict>
 </plist>
