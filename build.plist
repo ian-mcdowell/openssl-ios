@@ -14,7 +14,41 @@
     <key>dependencies</key>
     <array>
     </array>
+    <key>libraryOutputs</key>
+    <array>
+        <string>libssl</string>
+        <string>libcrypto</string>
+    </array>
     <key>buildSystem</key>
     <string>make</string>
+    <key>buildArgs</key>
+    <array>
+        <string>--config=Configurations/openssl-ios.conf</string>
+        <string>no-shared</string>
+        <string>no-gost</string>
+        <string>no-asm</string>
+        <string>no-tests</string>
+    </array>
+    <key>buildArchSpecificArgs</key>
+    <dict>
+        <key>iphoneos</key>
+        <dict>
+            <key>armv7</key>
+            <string>ios-arm32-cross</string>
+            <key>armv7s</key>
+            <string>ios-arm32-cross</string>
+            <key>arm64</key>
+            <string>ios-arm64-cross</string>
+        </dict>
+        <key>iphonesimulator</key>
+        <dict>
+            <key>i386</key>
+            <string>ios-sim32-cross</string>
+            <key>x86_64</key>
+            <string>ios-sim64-cross</string>
+        </dict>
+    </dict>
+    <key>installCommand</key>
+    <string>install_sw</string>
 </dict>
 </plist>
