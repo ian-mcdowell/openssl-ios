@@ -180,16 +180,14 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Submodules/openssl",
 			);
 			name = "Build openssl";
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/lib/libssl.a",
-				"$(BUILT_PRODUCTS_DIR)/lib/libcrypto.a",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/Submodules/ios-xcode-make-scripts/build-make-staticlib --config=$SRCROOT/Configurations/openssl-ios.conf no-shared no-gost no-asm no-tests";
+			shellScript = $SRCROOT/Submodules/ibuild/ibuild;
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -337,7 +335,7 @@
 				INFOPLIST_FILE = Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/lib";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/.ibuild/build/lib";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.ssl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -357,7 +355,7 @@
 				INFOPLIST_FILE = Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/lib";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/.ibuild/build/lib";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.ssl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -368,9 +366,6 @@
 		3CB4758D1FF5C42900C6B265 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INSTALL_COMMAND = install_sw;
-				LIBNAMES = "libssl libcrypto";
-				PER_ARCH_ARGS = "$(SRCROOT)/Configurations/per_arch_args.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -378,9 +373,6 @@
 		3CB4758E1FF5C42900C6B265 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INSTALL_COMMAND = install_sw;
-				LIBNAMES = "libssl libcrypto";
-				PER_ARCH_ARGS = "$(SRCROOT)/Configurations/per_arch_args.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
