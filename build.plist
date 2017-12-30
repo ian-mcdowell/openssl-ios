@@ -24,7 +24,7 @@
 	<string>make</string>
 	<key>buildArgs</key>
 	<array>
-		<string>--config=$SRCROOT/Configurations/openssl-ios.conf</string>
+		<string>--config=$<SRCROOT>/Configurations/openssl-ios.conf</string>
 		<string>no-shared</string>
 		<string>no-gost</string>
 		<string>no-asm</string>
