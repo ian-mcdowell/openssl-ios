@@ -61,6 +61,11 @@
 			<string>lib/libssl.a</string>
 			<string>lib/libcrypto.a</string>
 		</array>
+		<key>auxiliaryFiles</key>
+		<dict>
+			<key>Framework/module.modulemap</key>
+			<string>include/module.modulemap</string>
+		</dict>
 	</dict>
 	<key>dependencies</key>
 	<array/>
