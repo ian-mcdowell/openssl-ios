@@ -65,6 +65,8 @@
 		<dict>
 			<key>Framework/module.modulemap</key>
 			<string>include/module.modulemap</string>
+			<key>Framework/ssl.h</key>
+			<string>include/ssl.h</string>
 		</dict>
 	</dict>
 	<key>dependencies</key>
