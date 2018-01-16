@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CB475851FF5C40300C6B265 /* ssl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB475831FF5C40300C6B265 /* ssl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB475941FF5C92900C6B265 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB475931FF5C92900C6B265 /* libcrypto.a */; };
 		3CB475961FF5C92C00C6B265 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB475951FF5C92C00C6B265 /* libssl.a */; };
 		3CB4759A1FF5C98C00C6B265 /* openssl in Headers */ = {isa = PBXBuildFile; fileRef = 3CB475981FF5C98500C6B265 /* openssl */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,11 +24,11 @@
 
 /* Begin PBXFileReference section */
 		3CB475801FF5C40300C6B265 /* ssl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ssl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB475831FF5C40300C6B265 /* ssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
 		3CB475841FF5C40300C6B265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB475931FF5C92900C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ibuild/lib/libcrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB475951FF5C92C00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ibuild/lib/libssl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB475981FF5C98500C6B265 /* openssl */ = {isa = PBXFileReference; lastKnownFileType = text; name = openssl; path = ibuild/include/openssl; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CE064B9200E02D900680549 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +65,8 @@
 		3CB475821FF5C40300C6B265 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				3CB475831FF5C40300C6B265 /* ssl.h */,
 				3CB475841FF5C40300C6B265 /* Info.plist */,
+				3CE064B9200E02D900680549 /* module.modulemap */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -96,7 +95,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CB475851FF5C40300C6B265 /* ssl.h in Headers */,
 				3CB4759A1FF5C98C00C6B265 /* openssl in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
