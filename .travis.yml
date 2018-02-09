@@ -4,8 +4,8 @@ env:
   global:
     - LC_CTYPE=en_US.UTF-8
     - LANG=en_US.UTF-8
-    - PROJECT=ssl.xcodeproj
-    - IOS_FRAMEWORK_SCHEME="ssl"
+    - PROJECT=openssl.xcodeproj
+    - IOS_FRAMEWORK_SCHEME="openssl"
     - IOS_SIM_SDK=iphonesimulator11.2
     - IOS_DEV_SDK=iphoneos11.2
   matrix:
