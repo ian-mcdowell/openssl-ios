@@ -19,6 +19,8 @@ OpenSSL, built for iOS as a static library and framework
 # Requirements
 
 * Xcode 9 or later
+* [ibuild](https://github.com/IMcD23/ibuild)
+    * `brew install IMcD23/brew/ibuild`
 
 # Installation
 
@@ -29,7 +31,7 @@ To install openssl-ios using [Carthage](https://github.com/Carthage/Carthage), a
 github "IMcD23/openssl-ios" "master"
 ```
 
-# Submodule
+## Submodule
 To install openssl-ios as a submodule into your git repository, run the following command:
 
 ```

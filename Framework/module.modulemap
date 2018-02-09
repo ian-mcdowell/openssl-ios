@@ -1,108 +1,108 @@
-module ssl [system] {
+framework module openssl [system] {
+    export *
+
     module asn1 {
-        header "openssl/asn1.h"
+        header "asn1.h"
         export *
     }
     module bio {
-        header "openssl/bio.h"
+        header "bio.h"
         export *
     }
     module bn {
-        header "openssl/bn.h"
+        header "bn.h"
         export *
     }
     module buffer {
-        header "openssl/buffer.h"
+        header "buffer.h"
         export *
     }
     module crypto {
-        header "openssl/crypto.h"
+        header "crypto.h"
         export *
     }
     module dh {
-        header "openssl/dh.h"
+        header "dh.h"
         export *
     }
     module dsa {
-        header "openssl/dsa.h"
+        header "dsa.h"
         export *
     }
     module e_os2 {
-        header "openssl/e_os2.h"
+        header "e_os2.h"
         export *
     }
     module ec {
-        header "openssl/ec.h"
+        header "ec.h"
         export *
     }
     module ecdh {
-        header "openssl/ecdh.h"
+        header "ecdh.h"
         export *
     }
     module ecdsa {
-        header "openssl/ecdsa.h"
+        header "ecdsa.h"
         export *
     }
     module evp {
-        header "openssl/evp.h"
+        header "evp.h"
         export *
     }
     module lhash {
-        header "openssl/lhash.h"
+        header "lhash.h"
         export *
     }
     module obj_mac {
-        header "openssl/obj_mac.h"
+        header "obj_mac.h"
         export *
     }
     module objects {
-        header "openssl/objects.h"
+        header "objects.h"
         export *
     }
     module opensslconf {
-        header "openssl/opensslconf.h"
+        header "opensslconf.h"
         export *
     }
     module opensslv {
-        header "openssl/opensslv.h"
+        header "opensslv.h"
         export *
     }
     module ossl_typ {
-        header "openssl/ossl_typ.h"
+        header "ossl_typ.h"
         export *
     }
     module pkcs7 {
-        header "openssl/pkcs7.h"
+        header "pkcs7.h"
         export *
     }
     module rsa {
-        header "openssl/rsa.h"
+        header "rsa.h"
         export *
     }
     module safestack {
-        header "openssl/safestack.h"
+        header "safestack.h"
         export *
     }
     module sha {
-        header "openssl/sha.h"
+        header "sha.h"
         export *
     }
     module stack {
-        header "openssl/stack.h"
+        header "stack.h"
         export *
     }
     module symhacks {
-        header "openssl/symhacks.h"
+        header "symhacks.h"
         export *
     }
     module x509 {
-        header "openssl/x509.h"
+        header "x509.h"
         export *
     }
     module x509_vfy {
-        header "openssl/x509_vfy.h"
+        header "x509_vfy.h"
         export *
     }
-    
-    export *
 }
