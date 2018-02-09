@@ -36,7 +36,6 @@
 		3CB475841FF5C40300C6B265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB475931FF5C92900C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ibuild/lib/libcrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB475951FF5C92C00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ibuild/lib/libssl.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB475981FF5C98500C6B265 /* openssl */ = {isa = PBXFileReference; lastKnownFileType = text; name = openssl; path = ibuild/include/openssl; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD59D58202DF684002298B4 /* tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD59D5A202DF684002298B4 /* ssl_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ssl_tests.m; sourceTree = "<group>"; };
 		3CD59D5C202DF684002298B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,7 +67,6 @@
 		3CB475761FF5C40300C6B265 = {
 			isa = PBXGroup;
 			children = (
-				3CB475971FF5C97C00C6B265 /* include */,
 				3CB475821FF5C40300C6B265 /* Framework */,
 				3CD59D59202DF684002298B4 /* Tests */,
 				3CB475811FF5C40300C6B265 /* Products */,
@@ -101,14 +99,6 @@
 				3CB475931FF5C92900C6B265 /* libcrypto.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3CB475971FF5C97C00C6B265 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				3CB475981FF5C98500C6B265 /* openssl */,
-			);
-			name = include;
 			sourceTree = "<group>";
 		};
 		3CD59D59202DF684002298B4 /* Tests */ = {
@@ -158,7 +148,7 @@
 				3CB4757B1FF5C40300C6B265 /* Sources */,
 				3CB4757C1FF5C40300C6B265 /* Frameworks */,
 				3CB4757D1FF5C40300C6B265 /* Headers */,
-				3CD59E38202DFB97002298B4 /* ShellScript */,
+				3CD59E38202DFB97002298B4 /* Copy Headers */,
 			);
 			buildRules = (
 			);
@@ -241,14 +231,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3CD59E38202DFB97002298B4 /* ShellScript */ = {
+		3CD59E38202DFB97002298B4 /* Copy Headers */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(TARGET_BUILD_DIR)/ibuild/include/openssl/*",
+				"$(CONFIGURATION_BUILD_DIR)/ibuild/include/openssl/*",
 			);
+			name = "Copy Headers";
 			outputPaths = (
 				"$(TARGET_BUILD_DIR)/openssl.framework/Headers/",
 			);
