@@ -1,0 +1,108 @@
+module openssl [system] {
+    export *
+
+    module asn1 {
+        header "openssl/asn1.h"
+        export *
+    }
+    module bio {
+        header "openssl/bio.h"
+        export *
+    }
+    module bn {
+        header "openssl/bn.h"
+        export *
+    }
+    module buffer {
+        header "openssl/buffer.h"
+        export *
+    }
+    module crypto {
+        header "openssl/crypto.h"
+        export *
+    }
+    module dh {
+        header "openssl/dh.h"
+        export *
+    }
+    module dsa {
+        header "openssl/dsa.h"
+        export *
+    }
+    module e_os2 {
+        header "openssl/e_os2.h"
+        export *
+    }
+    module ec {
+        header "openssl/ec.h"
+        export *
+    }
+    module ecdh {
+        header "openssl/ecdh.h"
+        export *
+    }
+    module ecdsa {
+        header "openssl/ecdsa.h"
+        export *
+    }
+    module evp {
+        header "openssl/evp.h"
+        export *
+    }
+    module lhash {
+        header "openssl/lhash.h"
+        export *
+    }
+    module obj_mac {
+        header "openssl/obj_mac.h"
+        export *
+    }
+    module objects {
+        header "openssl/objects.h"
+        export *
+    }
+    module opensslconf {
+        header "openssl/opensslconf.h"
+        export *
+    }
+    module opensslv {
+        header "openssl/opensslv.h"
+        export *
+    }
+    module ossl_typ {
+        header "openssl/ossl_typ.h"
+        export *
+    }
+    module pkcs7 {
+        header "openssl/pkcs7.h"
+        export *
+    }
+    module rsa {
+        header "openssl/rsa.h"
+        export *
+    }
+    module safestack {
+        header "openssl/safestack.h"
+        export *
+    }
+    module sha {
+        header "openssl/sha.h"
+        export *
+    }
+    module stack {
+        header "openssl/stack.h"
+        export *
+    }
+    module symhacks {
+        header "openssl/symhacks.h"
+        export *
+    }
+    module x509 {
+        header "openssl/x509.h"
+        export *
+    }
+    module x509_vfy {
+        header "openssl/x509_vfy.h"
+        export *
+    }
+}
