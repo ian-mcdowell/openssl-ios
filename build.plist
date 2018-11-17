@@ -63,7 +63,7 @@
 		<key>auxiliaryFiles</key>
 		<dict>
 			<key>Framework/module.static.modulemap</key>
-			<string>include/module.modulemap</string>
+			<string>include/openssl/module.modulemap</string>
 		</dict>
 	</dict>
 	<key>dependencies</key>
