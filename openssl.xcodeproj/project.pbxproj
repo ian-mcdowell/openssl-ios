@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C2F9D4A21AE6A0B00037A95 /* shim.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2F9D4921AE6A0B00037A95 /* shim.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB475941FF5C92900C6B265 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB475931FF5C92900C6B265 /* libcrypto.a */; };
 		3CB475961FF5C92C00C6B265 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB475951FF5C92C00C6B265 /* libssl.a */; };
 		3CD59D5B202DF684002298B4 /* ssl_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD59D5A202DF684002298B4 /* ssl_tests.m */; };
@@ -32,10 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C2F9D4921AE6A0B00037A95 /* shim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shim.h; sourceTree = "<group>"; };
 		3CB475801FF5C40300C6B265 /* openssl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = openssl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB475841FF5C40300C6B265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CB475931FF5C92900C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ibuild/lib/libcrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB475951FF5C92C00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ibuild/lib/libssl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB475931FF5C92900C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ibuild/Products/lib/libcrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB475951FF5C92C00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ibuild/Products/lib/libssl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD59D58202DF684002298B4 /* tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD59D5A202DF684002298B4 /* ssl_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ssl_tests.m; sourceTree = "<group>"; };
 		3CD59D5C202DF684002298B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		3CB475821FF5C40300C6B265 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				3C2F9D4921AE6A0B00037A95 /* shim.h */,
 				3CB475841FF5C40300C6B265 /* Info.plist */,
 				3CE064B9200E02D900680549 /* module.modulemap */,
 			);
@@ -118,6 +121,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2F9D4A21AE6A0B00037A95 /* shim.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +241,7 @@
 			files = (
 			);
 			inputPaths = (
-				"$(CONFIGURATION_BUILD_DIR)/ibuild/include/openssl/*",
+				"$(CONFIGURATION_BUILD_DIR)/ibuild/Products/include/openssl/*",
 			);
 			name = "Copy Headers";
 			outputPaths = (
@@ -245,7 +249,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -R ${SCRIPT_INPUT_FILE_0} ${SCRIPT_OUTPUT_FILE_0}";
+			shellScript = "cp -R ${SCRIPT_INPUT_FILE_0} ${SCRIPT_OUTPUT_FILE_0}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -331,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -384,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -406,7 +410,7 @@
 				INFOPLIST_FILE = Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/ibuild/lib";
+				LIBRARY_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/ibuild/Products/lib";
 				MODULEMAP_FILE = Framework/module.modulemap;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.openssl;
@@ -426,7 +430,7 @@
 				INFOPLIST_FILE = Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/ibuild/lib";
+				LIBRARY_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/ibuild/Products/lib";
 				MODULEMAP_FILE = Framework/module.modulemap;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.openssl;

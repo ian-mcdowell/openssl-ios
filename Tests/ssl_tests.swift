@@ -9,7 +9,6 @@
 import XCTest
 
 import openssl
-import openssl.asn1
 
 class SSLTests: XCTestCase {
 
