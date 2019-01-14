@@ -23,6 +23,7 @@
 			<string>no-shared</string>
 			<string>no-gost</string>
 			<string>no-asm</string>
+			<string>no-async</string>
 		</array>
 		<key>buildArchSpecificArgs</key>
 		<dict>
